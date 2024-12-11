@@ -1,0 +1,39 @@
+{
+  "name": "node-coding-challenge",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "create-db": "psql.exe -U postgres < schema.sql",
+    "seed": "ts-node -r dotenv/config src/db/seed.ts",
+    "lint": "eslint . --ext .ts",
+    "start": "tsnd --rs -r dotenv/config src/index.ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.1",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "@fast-csv/parse": "^5.0.2",
+    "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^18.19.68",
+    "@types/pg": "^8.11.10",
+    "@types/supertest": "^6.0.2",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "jest": "^29.7.0",
+    "minifaker": "^1.34.1",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0"
+  }
+}
